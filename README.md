@@ -4,7 +4,7 @@ Intelligent Tutoring System
 Blog- https://medium.com/@ashrivastava_40082/building-an-intelligent-tutoring-system-from-scratch-irt-bkt-83693fb21286
 
 Steps to run the above code- 
-1. If your dataset is in the format "Data format generally received from e-learning platforms.csv" then using "preprocessing.py" to make that data reusable and then follow from step 2 else move directly to step 2.
+1. If your dataset is in the format generally received from e-learning platforms (https://drive.google.com/file/d/1NNXHFRxcArrU0ZJSb9BIL56vmUt5FhlE/view) then using "preprocessing.py" to make that data reusable and then follow from step 2 else move directly to step 2.
 2. Now your dataset would appear like "data (BKT).csv", so use "Contextual Estimation of Guess Slip method (BKT).py" to find labell each response as guess and slip.
 3. Now we will operate on "Demo1 (IRT).csv" which is transpose of the data in "data (BKT).csv". Use "ItemResponseTheory.py" to find the shortest learning path and your model is ready.  
 
