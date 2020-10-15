@@ -98,13 +98,19 @@ def P_G_func (P_L_previous, S, G, A1, A2):
     	return 1-((P(A+1+2/Ln)*P_L_previous)/P(A+1+2))
 
 P_L_fun: funtion returns learning probability
+
 P_C_fun: funtion returns correctness probability
+
 P_S_fun: function returns slip probability (depending on the next 2 actions - A+1+2)
+
 P_G_fun: function returns guess probability (depending on the next 2 actions - A+1+2)
+
 P(A+1+2/Ln): next 2 ations (n+1 and n+2) happened when student knew the concept at nth action
+
 P(A+1+2/~Ln): next 2 ations (n+1 and n+2) happened when student did not know the concept at nth action
 
 After labelling we will train the model to predict any action as guess or slip which will further be used in 3 parameter IRT to find the correctness probability and then the item information to define the shortest learning path.
+
 
 
 About Dataset and implementation
