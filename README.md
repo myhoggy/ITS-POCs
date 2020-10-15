@@ -43,6 +43,7 @@ The item information is used to rank the lessons in recommending the shortest le
 So the question is how should we get ‘c’ (guess factor) and ‘s’ (slip factor). Here we need contextual estimation of guess and slip method. It says that the probabilities of guess and slip of a student attempting a question are a function of external parameter like ‘Time taken’, ‘help request’, ‘number of opportunities student has already used in a current skill’ and ‘total time taken in this skill so far’. So for us to estimate these probabilities dynamically we first need to train the ML model. So we need training data that says the guess and slip probability of action. So we use Bayes theorem to label each action as guess and slip. Algorithmic implementation is shown below,
 
 def P_L_func (correct, P_L_previous, S, G):
+
   	if correct==1:
     		P_L_obs = (P_L_previous*(1-S))/(P_L_previous*(1-S) + (1-P_L_previous)*(1-G))
   	else:
@@ -53,11 +54,13 @@ def P_L_func (correct, P_L_previous, S, G):
   	return P_L_current
 
 def P_C_func (P_L_previous, S, G):
+
   	P_C_current = P_L_previous*(1-S) + (1-P_L_previous)*G
   
   	return P_C_current
 
 def P_S_func (P_L_previous, S, G, A1, A2):
+
     	if A1==1 and A2==1:
         		P(A+1+2/Ln) = (1-S)*(1-S)
         		P(A+1+2/~Ln) = P_T*(1-S)*(1-S) + (1-P_T)*P_T*G*(1-S) + (1-P_T)*(1-P_T)*G*G
@@ -76,6 +79,7 @@ def P_S_func (P_L_previous, S, G, A1, A2):
     	return (P(A+1+2/Ln)*P_L_previous)/P(A+1+2)
 
 def P_G_func (P_L_previous, S, G, A1, A2):
+
     	if A1==1 and A2==1:
         		P(A+1+2/Ln) = (1-S)*(1-S)
         		P(A+1+2/~Ln) = P_T*(1-S)*(1-S) + (1-P_T)*P_T*G*(1-S) + (1-P_T)*(1-P_T)*G*G
