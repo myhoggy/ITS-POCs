@@ -121,10 +121,15 @@ The dataset used is for 10 students in which each student answers 6 questions of
 
 
 Now since we arranged these sub-sections according to the increasing item information for each student, we need to ask questions in each section according to that, so I assumed 5 categories in which item information of each student can fall.
+
 Range 1: 0.0<Item Information<=0.05 thus 4-easy, 1-medium and 1-hard
+
 Range 1: 0.05<Item Information<=0.10 thus 3-easy, 2-medium and 1-hard
+
 Range 1: 0.10<Item Information<=0.15 thus 2-easy, 2-medium and 2-hard
+
 Range 1: 0.15<Item Information<=0.20 thus 1-easy, 3-medium and 2-hard
+
 Range 1: 0.20<Item Information<=0.25 thus 0-easy, 3-medium and 3-hard
 
 So the questions asked to each student will be,
